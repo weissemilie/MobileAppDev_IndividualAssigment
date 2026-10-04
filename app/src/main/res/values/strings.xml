@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">IndividualAssignment</string>
+    <string name="open_menu">Åbn menu</string>
+    <string name="genres">Genrer</string>
+    <string name="welcome_text">Velkommen til bibliotekets app! Åbn menuen for at se genrerne.</string>
 </resources>
