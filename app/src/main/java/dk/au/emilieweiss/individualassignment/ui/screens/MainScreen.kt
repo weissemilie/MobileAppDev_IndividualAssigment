@@ -1,6 +1,6 @@
 package dk.au.emilieweiss.individualassignment.ui.screens
 
-import android.widget.Toast
+import android.content.Intent
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -24,6 +24,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import dk.au.emilieweiss.individualassignment.ListActivity
 import dk.au.emilieweiss.individualassignment.R
 import dk.au.emilieweiss.individualassignment.data.BookRepository
 import dk.au.emilieweiss.individualassignment.ui.theme.IndividualAssignmentTheme
@@ -52,7 +53,9 @@ fun MainScreen() {
                         selected = false,
                         onClick = {
                             scope.launch { drawerState.close() }
-                            Toast.makeText(context, genre.displayName, Toast.LENGTH_SHORT).show()
+                            val intent = Intent(context, ListActivity::class.java)
+                            intent.putExtra(ListActivity.EXTRA_GENRE, genre.name)
+                            context.startActivity(intent)
                         },
                         modifier = Modifier.padding(NavigationDrawerItemDefaults.ItemPadding)
                     )
