@@ -1,6 +1,19 @@
 <resources>
     <string name="app_name">IndividualAssignment</string>
     <string name="open_menu">Åbn menu</string>
+    <string name="back">Tilbage</string>
     <string name="genres">Genrer</string>
-    <string name="welcome_text">Velkommen til bibliotekets app! Åbn menuen for at se genrerne.</string>
+    <string name="welcome_title">Velkommen til biblioteket</string>
+    <string name="welcome_text">Vælg en genre for at se bøgerne.</string>
+    <plurals name="book_count">
+        <item quantity="one">%d bog</item>
+        <item quantity="other">%d bøger</item>
+    </plurals>
+    <string name="label_year">År</string>
+    <string name="label_pages">Sidetal</string>
+    <string name="label_genre">Genre</string>
+    <string name="label_isbn">ISBN</string>
+    <string name="summary_title">Resumé</string>
+    <string name="status_borrowed">Udlånt</string>
+    <string name="status_available">Hjemme</string>
 </resources>

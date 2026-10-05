@@ -26,6 +26,10 @@
                 android:name=".ListActivity"
                 android:exported="false"
                 android:theme="@style/Theme.IndividualAssignment"/>
+        <activity
+                android:name=".DetailActivity"
+                android:exported="false"
+                android:theme="@style/Theme.IndividualAssignment"/>
     </application>
 
 </manifest>
