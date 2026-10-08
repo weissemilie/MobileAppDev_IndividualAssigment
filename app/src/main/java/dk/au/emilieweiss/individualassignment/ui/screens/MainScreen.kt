@@ -49,7 +49,7 @@ fun MainScreen(
                 Text(
                     text = stringResource(R.string.genres),
                     style = MaterialTheme.typography.titleMedium,
-                    color = MaterialTheme.colorScheme.secondary,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.padding(16.dp)
                 )
                 genres.forEach { genre ->

@@ -29,7 +29,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dk.au.emilieweiss.individualassignment.R
 import dk.au.emilieweiss.individualassignment.data.Book
-import dk.au.emilieweiss.individualassignment.ui.components.BookCover
+import dk.au.emilieweiss.individualassignment.data.CoverSize
+import dk.au.emilieweiss.individualassignment.ui.components.BookCoverImage
 import dk.au.emilieweiss.individualassignment.ui.components.StatusChip
 import dk.au.emilieweiss.individualassignment.ui.preview.PreviewData
 import dk.au.emilieweiss.individualassignment.ui.theme.IndividualAssignmentTheme
@@ -64,10 +65,11 @@ fun DetailScreen(book: Book, onBack: () -> Unit) {
                 .verticalScroll(rememberScrollState())
                 .padding(16.dp)
         ) {
-            BookCover(
-                title = book.title,
-                color = genreColor(book.genre),
-                size = 160.dp
+            BookCoverImage(
+                book = book,
+                coverSize = CoverSize.L,
+                size = 160.dp,
+                aspectRatio = 2f / 3f
             )
             Spacer(Modifier.height(16.dp))
             Text(

@@ -24,15 +24,16 @@ fun BookCover(
     title: String,
     color: Color,
     size: Dp,
+    height: Dp = size,
     modifier: Modifier = Modifier
 ) {
-    val fontSize = with(LocalDensity.current) { (size * 0.45f).toSp() }
+    val fontSize = with(LocalDensity.current) { (minOf(size, height) * 0.45f).toSp() }
 
     Box(
         contentAlignment = Alignment.Center,
         modifier = modifier
-            .size(size)
-            .clip(RoundedCornerShape(size * 0.15f))
+            .size(width = size, height = height)
+            .clip(RoundedCornerShape(minOf(size, height) * 0.15f))
             .background(color)
     ) {
         Text(

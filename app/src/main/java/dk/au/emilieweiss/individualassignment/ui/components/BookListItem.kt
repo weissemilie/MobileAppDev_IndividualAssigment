@@ -14,9 +14,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dk.au.emilieweiss.individualassignment.data.Book
+import dk.au.emilieweiss.individualassignment.data.CoverSize
 import dk.au.emilieweiss.individualassignment.ui.preview.PreviewData
 import dk.au.emilieweiss.individualassignment.ui.theme.IndividualAssignmentTheme
-import dk.au.emilieweiss.individualassignment.ui.theme.genreColor
 
 @Composable
 fun BookListItem(
@@ -29,9 +29,9 @@ fun BookListItem(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier.padding(12.dp)
         ) {
-            BookCover(
-                title = book.title,
-                color = genreColor(book.genre),
+            BookCoverImage(
+                book = book,
+                coverSize = CoverSize.M,
                 size = 56.dp
             )
             Column(
